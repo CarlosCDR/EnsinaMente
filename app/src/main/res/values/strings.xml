@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">EnsinaMente</string>
+    <string name="title_activity_principal">PrincipalActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_principal2">PrincipalActivity2</string>
+    <string name="comece_os_estudos_j">Comece os estudos já</string>
+    <string name="crie_sua_conta">Crie sua conta</string>
+    <string name="crie_sua_conta_gratis">Crie Sua Conta Gratis</string>
+    <string name="vamos_come_ar_a_estudar">Vamos começar a estudar</string>
+    <string name="j_tenho_conta">Já tenho conta</string>
+    <string name="textview">TextView</string>
+    <string name="crie_sua_conta_gr_tis">Crie sua conta grátis</string>
+    <string name="nome">Nome</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="cadastrar">CADASTRAR</string>
+    <string name="termos_de_uso">Termos de Uso</string>
+    <string name="cadastrar_se">Cadastrar-se</string>
+    <string name="ja_tenho_conta">Ja tenho conta</string>
+</resources>

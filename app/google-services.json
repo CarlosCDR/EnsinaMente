@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "363943915469",
+    "project_id": "appensinamente",
+    "storage_bucket": "appensinamente.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363943915469:android:d2ecb1b03ae41a4deede84",
+        "android_client_info": {
+          "package_name": "com.example.ensinamente"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363943915469-p3mr8tp58fvjbqic0cen2jaui8chm8qs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ensinamente",
+            "certificate_hash": "f399ee628aa496856984cadea1210a5865f9d5a5"
+          }
+        },
+        {
+          "client_id": "363943915469-b9pbkdtm8tl28mfdomm6lk82nqksgm9l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLKuItM0GMahhWsaki6Phrl2uUJgWDzNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363943915469-b9pbkdtm8tl28mfdomm6lk82nqksgm9l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
