@@ -49,12 +49,16 @@ public class MainActivity extends IntroActivity {
         setContentView(R.layout.activity_main);
         //recupera o token
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken("363943915469-b9pbkdtm8tl28mfdomm6lk82nqksgm9l.apps.googleusercontent.com")
+                .requestIdToken("442949868033-f3l31q0haaeadiitrm826mf8uefmv4ul.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
         autenticacao = FirebaseAuth.getInstance();
+
+        findViewById(R.id.signInButton).setOnClickListener(view -> {
+           signIn();
+        });
 
         mCallbackManager = CallbackManager.Factory.create();
         LoginButton loginButton = findViewById(R.id.btnFacebook);
@@ -75,14 +79,6 @@ public class MainActivity extends IntroActivity {
             public void onError(FacebookException error) {
                 Log.d(TAG, "facebook:onError", error);
             }
-        });
-
-        findViewById(R.id.btnFacebook).setOnClickListener(view -> {
-
-        });
-
-       findViewById(R.id.signInButton).setOnClickListener(view -> {
-            signIn();
         });
 
     }
@@ -121,6 +117,8 @@ public class MainActivity extends IntroActivity {
                 }
             }
     );
+
+
     private void loginComGoogle(String token){
         AuthCredential credencial = GoogleAuthProvider.getCredential(token, null);
 
@@ -152,15 +150,9 @@ public class MainActivity extends IntroActivity {
                 Log.d("Erro", exception.toString());
             }
         }
+        mCallbackManager.onActivityResult(requestCode, resultCode, intent);
     }
 
-    //metodo de login com Facebook
-    public void onResultActivity(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        // Pass the activity result back to the Facebook SDK
-       mCallbackManager.onActivityResult(requestCode, resultCode, data);
-    }
 
     private void handleFacebookAccessToken(AccessToken token) {
         Log.d(TAG, "handleFacebookAccessToken:" + token);
@@ -193,7 +185,7 @@ public class MainActivity extends IntroActivity {
             Intent i = new Intent(MainActivity.this, PrincipalActivity.class);
             startActivity(i);
             finish();
-            Toast.makeText(MainActivity.this, "Ingreso", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Login com Facebook efetuado com Sucesso", Toast.LENGTH_SHORT).show();
         } else {
 
             // No user is signed in
