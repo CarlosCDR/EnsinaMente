@@ -72,7 +72,6 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-
     public void validarLogin(){
 
         autenticacao = ConfiguracaoFireBase.getFireBaseAutenticacao();

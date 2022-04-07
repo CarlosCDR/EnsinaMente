@@ -24,4 +24,7 @@
     <string name="termos_de_uso">Termos de Uso</string>
     <string name="cadastrar_se">Cadastrar-se</string>
     <string name="ja_tenho_conta">Ja tenho conta</string>
+    <string name="facebook_app_id">359518819270607</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
 </resources>
