@@ -12,8 +12,24 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-    </style>
 
+    </style>
+    <style name="tarefaTheme" parent="Theme.AppCompat.Light.NoActionBar">
+          <item name="windowActionBar">false</item>
+          <item name="windowNoTitle">true</item>
+          <item name="colorPrimary">@color/colorPrimaryTarefa</item>
+          <item name="colorPrimaryDark">@color/colorPrimaryDarkTarefa</item>
+          <item name="colorAccent">@color/colorAccentTarefa</item>
+
+    </style>
+    <style name="metaTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimaryMeta</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkMeta</item>
+        <item name="colorAccent">@color/colorAccentMeta</item>
+
+    </style>
     <style name="Theme.EnsinaMente.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

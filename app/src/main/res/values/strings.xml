@@ -27,4 +27,13 @@
     <string name="facebook_app_id">359518819270607</string>
     <string name="fb_login_protocol_scheme">fb1234</string>
     <string name="facebook_client_token">56789</string>
+    <string name="todo2">TODO</string>
+    <string name="crie_suas_metas_de_estudos_aqui">Crie suas metas de estudos aqui</string>
+    <string name="ex_31_08_2022">Ex:31/08/2022</string>
+    <string name="qual_sua_motiva_o_de_estudo">Qual sua motivação de estudo?</string>
+    <string name="qual_o_nome_da_tarefa">Qual o nome da tarefa?</string>
+    <string name="todo">TODO</string>
+    <string name="nome_da_tarefa">Nome da Tarefa</string>
+    <string name="disciplina_ou_tipo_de_estudo">Disciplina ou Tipo de Estudo</string>
+    <string name="crie_sua_tarefa">Crie sua tarefa</string>
 </resources>

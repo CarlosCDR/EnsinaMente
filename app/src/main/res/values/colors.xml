@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Cores Tarefas!-->
+    <color name="colorPrimaryTarefa">#00D39E</color>
+    <color name="colorPrimaryDarkTarefa">#00BE8D</color>
+    <color name="colorAccentTarefa">#00D39E</color>
+
+    <!--Cores Metas!-->
+    <color name="colorPrimaryMeta">#FF706A</color>
+    <color name="colorPrimaryDarkMeta">#E66560</color>
+    <color name="colorAccentMeta">#FF706A</color>
+
+
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

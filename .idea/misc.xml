@@ -3,13 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/ic_adicionar_branco_24dp.xml" value="0.2985" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/ic_confirmar_branco_24.xml" value="0.2985" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_cadastro.xml" value="0.33" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_facebook_auth.xml" value="0.16770833333333332" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_intro.xml" value="0.21770833333333334" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_login.xml" value="0.35643115942028986" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_main2.xml" value="0.346875" />
-        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_principal.xml" value="0.35643115942028986" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_meta.xml" value="0.33" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_principal.xml" value="0.22" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_tarefa2.xml" value="0.33" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_teste_google.xml" value="0.346875" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/content_principal.xml" value="0.22" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/fragment_first.xml" value="0.346875" />
