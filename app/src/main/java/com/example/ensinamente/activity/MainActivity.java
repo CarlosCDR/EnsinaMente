@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -43,6 +44,7 @@ public class MainActivity extends IntroActivity {
     private static final String TAG = "FacebookLogin";
     private CallbackManager mCallbackManager;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,6 +82,7 @@ public class MainActivity extends IntroActivity {
                 Log.d(TAG, "facebook:onError", error);
             }
         });
+
 
     }
 

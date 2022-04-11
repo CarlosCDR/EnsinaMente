@@ -12,11 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EnsinaMente">
         <activity
-            android:name=".activity.MetaActivity" android:theme="@style/metaTheme"
+            android:name=".activity.PomodoroActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.TarefaActivity" android:theme="@style/tarefaTheme"
+            android:name=".activity.FlashCardsActivity"
             android:exported="false" />
+        <activity
+            android:name=".activity.MetaActivity"
+            android:exported="false"
+            android:theme="@style/metaTheme" />
+        <activity
+            android:name=".activity.TarefaActivity"
+            android:exported="false"
+            android:theme="@style/tarefaTheme" />
         <activity
             android:name=".activity.PrincipalActivity"
             android:exported="false"

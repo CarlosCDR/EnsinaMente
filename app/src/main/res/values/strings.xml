@@ -1,13 +1,22 @@
 <resources>
     <string name="app_name">EnsinaMente</string>
     <string name="title_activity_principal">PrincipalActivity</string>
+    <string-array name="aticity_metodo">
+        <item>"FlashCards"</item>
+        <item>"Pomodoro"</item>
+    </string-array>
+    <string-array name="aticity_criticidade">
+        <item>"Alta"</item>
+        <item>"Médio"</item>
+        <item>"Baixa"</item>
+    </string-array>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
+    <string name="first_fragment_label">Ensina Mente</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_first_fragment">Bem-Vindo</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_principal2">PrincipalActivity2</string>
     <string name="comece_os_estudos_j">Comece os estudos já</string>
@@ -32,8 +41,16 @@
     <string name="ex_31_08_2022">Ex:31/08/2022</string>
     <string name="qual_sua_motiva_o_de_estudo">Qual sua motivação de estudo?</string>
     <string name="qual_o_nome_da_tarefa">Qual o nome da tarefa?</string>
-    <string name="todo">TODO</string>
+    <string name="todo6">TODO</string>
     <string name="nome_da_tarefa">Nome da Tarefa</string>
     <string name="disciplina_ou_tipo_de_estudo">Disciplina ou Tipo de Estudo</string>
     <string name="crie_sua_tarefa">Crie sua tarefa</string>
+    <string name="todo4">TODO</string>
+    <string name="flashcards">FlashCards</string>
+    <string name="todo5">TODO</string>
+    <string name="todo7">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="pomodoro">Pomodoro</string>
+    <string name="string_pomodoro" />
+    <string name="Pomodoro">Pomodoro</string>
 </resources>
