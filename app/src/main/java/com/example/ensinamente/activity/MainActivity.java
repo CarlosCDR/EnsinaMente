@@ -90,8 +90,8 @@ public class MainActivity extends IntroActivity {
     public void onStart(){
         super.onStart();
         verificarUsuarioLogado();
-        FirebaseUser currentUser = autenticacao.getCurrentUser();
-        updateUI(currentUser);
+        //FirebaseUser currentUser = autenticacao.getCurrentUser();
+        //updateUI(currentUser);
     }
 
 
@@ -169,19 +169,19 @@ public class MainActivity extends IntroActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = autenticacao.getCurrentUser();
-                            updateUI(user);
+                            //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             Toast.makeText(MainActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
-                            updateUI(null);
+                            //updateUI(null);
                         }
                     }
                 });
     }
 
-    private void updateUI(FirebaseUser user) {
+    /*private void updateUI(FirebaseUser user) {
         FirebaseUser users = FirebaseAuth.getInstance().getCurrentUser();
         if (users != null) {
             // User is signed in
@@ -193,7 +193,7 @@ public class MainActivity extends IntroActivity {
 
             // No user is signed in
         }
-    }
+    }*/
 
 
     //metodos de cadastro e login
@@ -209,6 +209,7 @@ public class MainActivity extends IntroActivity {
     public void verificarUsuarioLogado(){
         autenticacao = ConfiguracaoFireBase.getFireBaseAutenticacao();
         //autenticacao.signOut();
+        //autenticacao.getInstance().signOut();
         if(autenticacao.getCurrentUser() != null){
             abrirTelaPrincipal();
         }
