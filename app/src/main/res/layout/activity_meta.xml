@@ -41,6 +41,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nomeTarefaMeta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/qual_o_nome_da_tarefa"
@@ -61,6 +62,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/motivacaoTarefa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/qual_sua_motiva_o_de_estudo"
@@ -81,6 +83,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/ex_31_08_2022"
@@ -89,7 +92,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingCadastraTarefa"
+        android:id="@+id/floatingCadastraMeta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -100,6 +103,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_confirmar_branco_24"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck"
-        android:focusable="true" />
+        android:focusable="true"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

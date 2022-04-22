@@ -22,6 +22,14 @@
           <item name="colorAccent">@color/colorAccentTarefa</item>
 
     </style>
+    <style name="flashCardsTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimaryTarefa</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkTarefa</item>
+        <item name="colorAccent">@color/colorAccentTarefa</item>
+
+    </style>
     <style name="metaTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

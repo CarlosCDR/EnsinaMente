@@ -5,11 +5,7 @@
         <item>"FlashCards"</item>
         <item>"Pomodoro"</item>
     </string-array>
-    <string-array name="aticity_criticidade">
-        <item>"Alta"</item>
-        <item>"Médio"</item>
-        <item>"Baixa"</item>
-    </string-array>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Ensina Mente</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -53,4 +49,14 @@
     <string name="pomodoro">Pomodoro</string>
     <string name="string_pomodoro" />
     <string name="Pomodoro">Pomodoro</string>
+    <string name="m_todo_flashcards">Método FlashCards</string>
+    <string name="nome_da_tarefaMetodo">Nome da Tarefa</string>
+    <string name="frente">Frente</string>
+    <string name="Verso">hint</string>
+    <string name="verso2">Verso</string>
+    <string name="verso">Verso</string>
+    <string name="verso3">Verso</string>
+    <string name="frente2">Frente</string>
+    <string name="todo3">TODO</string>
+    <string name="todo8">TODO</string>
 </resources>

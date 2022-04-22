@@ -16,7 +16,8 @@
             android:exported="false" />
         <activity
             android:name=".activity.FlashCardsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/flashCardsTheme"/>
         <activity
             android:name=".activity.MetaActivity"
             android:exported="false"

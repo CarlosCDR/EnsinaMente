@@ -107,7 +107,6 @@ public class MainActivity extends IntroActivity {
             result -> {
                 if(result.getResultCode() == Activity.RESULT_OK){
                     Intent intent = result.getData();
-
                     Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(intent);
                     try{
                         GoogleSignInAccount conta = task.getResult(ApiException.class);
@@ -156,7 +155,6 @@ public class MainActivity extends IntroActivity {
         mCallbackManager.onActivityResult(requestCode, resultCode, intent);
     }
 
-
     private void handleFacebookAccessToken(AccessToken token) {
         Log.d(TAG, "handleFacebookAccessToken:" + token);
 
@@ -169,19 +167,19 @@ public class MainActivity extends IntroActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = autenticacao.getCurrentUser();
-                            //updateUI(user);
+                            updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             Toast.makeText(MainActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
-                            //updateUI(null);
+                            updateUI(null);
                         }
                     }
                 });
     }
 
-    /*private void updateUI(FirebaseUser user) {
+    private void updateUI(FirebaseUser user) {
         FirebaseUser users = FirebaseAuth.getInstance().getCurrentUser();
         if (users != null) {
             // User is signed in
@@ -193,8 +191,7 @@ public class MainActivity extends IntroActivity {
 
             // No user is signed in
         }
-    }*/
-
+    }
 
     //metodos de cadastro e login
     public void btEntra(View view){
@@ -207,13 +204,14 @@ public class MainActivity extends IntroActivity {
 
     //verificando se o usuario esta realmente logado
     public void verificarUsuarioLogado(){
-        autenticacao = ConfiguracaoFireBase.getFireBaseAutenticacao();
+        //autenticacao = ConfiguracaoFireBase.getFireBaseAutenticacao();
         //autenticacao.signOut();
         //autenticacao.getInstance().signOut();
         if(autenticacao.getCurrentUser() != null){
             abrirTelaPrincipal();
         }
     }
+
     //abri tela principal do app
     public void abrirTelaPrincipal(){
         startActivity(new Intent(this, PrincipalActivity.class));

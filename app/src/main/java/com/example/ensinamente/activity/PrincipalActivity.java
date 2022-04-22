@@ -3,18 +3,12 @@ package com.example.ensinamente.activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.ensinamente.databinding.ActivityPrincipalBinding;
-import com.github.clans.fab.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -22,6 +16,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.ensinamente.R;
+import com.example.ensinamente.databinding.ActivityPrincipalBinding;
 
 public class PrincipalActivity extends AppCompatActivity {
 
@@ -40,7 +35,7 @@ public class PrincipalActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar);
 
-        activityMetodo = (Spinner) findViewById(R.id.spinner_metodo);
+        activityMetodo = (Spinner) findViewById(R.id.spinner_tipos);
         activityCriticidade = (Spinner) findViewById(R.id.spinner_criticidade);
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_principal);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
@@ -64,8 +59,12 @@ public class PrincipalActivity extends AppCompatActivity {
     }
 
 
-
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
     public void criarTarefa(View view){
           startActivity(new Intent(this,TarefaActivity.class));
