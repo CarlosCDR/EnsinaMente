@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/imagem_estrada"
-    tools:context=".FirstFragment">
+    tools:context=".activity.PrincipalActivity">
 
     <TextView
         android:id="@+id/textview_first"

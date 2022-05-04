@@ -12,12 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EnsinaMente">
         <activity
+            android:name=".activity.CartaoInvertidoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CartaoBasicoActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.PomodoroActivity"
             android:exported="false" />
         <activity
             android:name=".activity.FlashCardsActivity"
             android:exported="false"
-            android:theme="@style/flashCardsTheme"/>
+            android:theme="@style/flashCardsTheme" />
         <activity
             android:name=".activity.MetaActivity"
             android:exported="false"

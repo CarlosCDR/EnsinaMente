@@ -5,25 +5,24 @@ import com.example.ensinamente.helper.Base64Custom;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 
-public class Tarefa {
-
+public class FlashCards {
     private String nomeTarefa;
-    private String disciplina;
-    private String metodo;
-    private String criticidadeTarefa;
+    private String frente;
+    private String verso;
 
 
-    public Tarefa() {
+    public FlashCards() {
     }
 
-    public void salvarTarefa(){
-
+    public void salvaMetodo(String nomeTarefaEscolhida){
         FirebaseAuth autenticacao = ConfiguracaoFireBase.getFireBaseAutenticacao();
         String idUsuario = Base64Custom.codificarBase64( autenticacao.getCurrentUser().getEmail() );
+        String tarefaNome = nomeTarefaEscolhida;
 
         DatabaseReference firebase = ConfiguracaoFireBase.getFirebaseDatabase();
-        firebase.child("tarefa")
-                .child( idUsuario )
+        firebase.child("flashCards")
+                .child(idUsuario)
+                .child(tarefaNome)
                 .push()
                 .setValue(this);
     }
@@ -37,27 +36,19 @@ public class Tarefa {
         this.nomeTarefa = nomeTarefa;
     }
 
-    public String getDisciplina() {
-        return disciplina;
+    public String getFrente() {
+        return frente;
     }
 
-    public void setDisciplina(String disciplina) {
-        this.disciplina = disciplina;
+    public void setFrente(String frente) {
+        this.frente = frente;
     }
 
-    public String getMetodo() {
-        return metodo;
+    public String getVerso() {
+        return verso;
     }
 
-    public void setMetodo(String metodo) {
-        this.metodo = metodo;
-    }
-
-    public String getCriticidadeTarefa() {
-        return criticidadeTarefa;
-    }
-
-    public void setCriticidadeTarefa(String criticidadeTarefa) {
-        this.criticidadeTarefa = criticidadeTarefa;
+    public void setVerso(String verso) {
+        this.verso = verso;
     }
 }

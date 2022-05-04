@@ -2,11 +2,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <item android:id="@+id/visualizarMetas"
+        android:title="Visualizar Metas"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/dicasEstudos"
+        android:title="Dicas para os Estudos"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/tarefas"
+        android:title="Tarefas"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/tarefasConcluidas"
+        android:title="Visualizar Tarefas Concluídas"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/visualizarMetodos"
+        android:title="Visualizar Metódos e Técnicas"
+        app:showAsAction="never"
+        />
     <item android:id="@+id/configuracoes"
         android:title="Configurações"
         app:showAsAction="never"
         />
-    <item android:id="@+id/configuracoesSair"
+    <item android:id="@+id/menuSair"
         android:title="Sair"
         app:showAsAction="never"
         />

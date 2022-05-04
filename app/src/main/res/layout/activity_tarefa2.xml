@@ -65,7 +65,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tarefa"
+            android:id="@+id/tarefaNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/disciplina_ou_tipo_de_estudo"
@@ -98,7 +98,7 @@
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/floatingActionFlashCards"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -113,7 +113,7 @@
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButtonVoltar"
+        android:id="@+id/voltaPrincipalFlashCards"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"

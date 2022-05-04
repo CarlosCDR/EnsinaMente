@@ -3,10 +3,12 @@ package com.example.ensinamente.activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Spinner;
 
@@ -16,10 +18,13 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.ensinamente.R;
+import com.example.ensinamente.config.ConfiguracaoFireBase;
 import com.example.ensinamente.databinding.ActivityPrincipalBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class PrincipalActivity extends AppCompatActivity {
 
+    private FirebaseAuth autenticacao;
     private AppBarConfiguration appBarConfiguration;
     private ActivityPrincipalBinding binding;
     Spinner activityMetodo,
@@ -29,6 +34,8 @@ public class PrincipalActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        autenticacao = ConfiguracaoFireBase.getFireBaseAutenticacao();
 
         binding = ActivityPrincipalBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -40,10 +47,6 @@ public class PrincipalActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_principal);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-
-
-
 
         /*findViewById(R.id.floatingCadastraTarefa).setOnClickListener(view -> {
             startActivity(new Intent(this,FlashCardsActivity.class));
@@ -66,11 +69,34 @@ public class PrincipalActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch ( item.getItemId() ){
+            case R.id.menuSair:
+                 deslogarUsuario();
+                 finish();
+                break;
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     public void criarTarefa(View view){
           startActivity(new Intent(this,TarefaActivity.class));
     }
     public void criarMeta(View view){
          startActivity(new Intent(this,MetaActivity.class));
+    }
+    public void metodoFlashCards(View view){
+        startActivity(new Intent(this, FlashCardsActivity.class));
+
+    }
+    public void deslogarUsuario(){
+         try{
+             autenticacao.signOut();
+         }catch (Exception e){
+               e.printStackTrace();
+         }
     }
 
     @Override

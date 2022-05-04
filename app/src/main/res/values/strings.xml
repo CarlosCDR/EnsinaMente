@@ -23,8 +23,8 @@
     <string name="textview">TextView</string>
     <string name="crie_sua_conta_gr_tis">Crie sua conta grátis</string>
     <string name="nome">Nome</string>
-    <string name="email">Email</string>
-    <string name="senha">Senha</string>
+    <string name="nameEmail">Email</string>
+    <string name="nameSenha">Senha</string>
     <string name="cadastrar">CADASTRAR</string>
     <string name="termos_de_uso">Termos de Uso</string>
     <string name="cadastrar_se">Cadastrar-se</string>
@@ -59,4 +59,8 @@
     <string name="frente2">Frente</string>
     <string name="todo3">TODO</string>
     <string name="todo8">TODO</string>
+    <string name="senha">Senha</string>
+    <string name="email">Email</string>
+    <string name="acesse_sua_conta">Acesse sua conta</string>
+    <string name="entrar">Entrar</string>
 </resources>

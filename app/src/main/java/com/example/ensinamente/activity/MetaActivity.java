@@ -17,7 +17,7 @@ public class MetaActivity extends AppCompatActivity {
     private EditText campoNomeTarefa;
     private EditText campoMotivacao;
     private EditText campoData;
-
+    private String textoNomeTarefa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +27,20 @@ public class MetaActivity extends AppCompatActivity {
         campoNomeTarefa = findViewById(R.id.nomeTarefaMeta);
         campoMotivacao = findViewById(R.id.motivacaoTarefa);
         campoData = findViewById(R.id.data);
+        textoNomeTarefa = campoNomeTarefa.getText().toString();
 
-        findViewById(R.id.floatingCadastraMeta).setOnClickListener(view -> salvar());
+        findViewById(R.id.floatingCadastraMeta).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                  if(!textoNomeTarefa.isEmpty()){
+                      salvar();
+                  }else{
+                      Toast.makeText(MetaActivity.this,
+                              "Nome tarefa não foi preenchido!",
+                              Toast.LENGTH_SHORT).show();
+                  }
+            }
+        });
 
     }
 

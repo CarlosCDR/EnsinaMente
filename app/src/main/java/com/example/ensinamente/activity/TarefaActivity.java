@@ -10,7 +10,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 import com.example.ensinamente.R;
+import com.example.ensinamente.config.ConfiguracaoFireBase;
 import com.example.ensinamente.model.Tarefa;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 
 import java.util.Arrays;
 import java.util.List;
@@ -22,7 +25,9 @@ public class TarefaActivity extends AppCompatActivity {
     private EditText campoDisciplina;
     private String   campoSpinnerMetodo;
     private String   campoSpinnerCriticidade;
-
+    private FirebaseAuth auth;
+    private DatabaseReference firebaseRef = ConfiguracaoFireBase.getFirebaseDatabase();
+    private String textoNomeTarefa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,18 +48,18 @@ public class TarefaActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         spinner1.setAdapter(adapter1);
 
-
         campoTarefa = findViewById(R.id.nomeTarefaMeta);
-        campoDisciplina = findViewById(R.id.tarefa);
-        campoSpinnerMetodo = spinner.getSelectedItem().toString();
-        campoSpinnerCriticidade = spinner1.getSelectedItem().toString();
+        campoDisciplina = findViewById(R.id.tarefaNome);
+
 
         //Salva a tarefa e leva para a tela de metodos de estudo
-        findViewById(R.id.floatingActionButton).setOnClickListener(view -> {
+        findViewById(R.id.floatingActionFlashCards).setOnClickListener(view -> {
             String metodos1 = spinner.getSelectedItem().toString();
             String textoTarefa = campoTarefa.getText().toString();
             String textoDisciplina = campoDisciplina.getText().toString();
-
+            String nomeTarefa = campoTarefa.getText().toString();
+            campoSpinnerMetodo = spinner.getSelectedItem().toString();
+            campoSpinnerCriticidade = spinner1.getSelectedItem().toString();
             //salvando a tarefa
             if(!textoTarefa.isEmpty()){
                 if(!textoDisciplina.isEmpty()){
@@ -65,35 +70,34 @@ public class TarefaActivity extends AppCompatActivity {
                     tarefa.setCriticidadeTarefa(campoSpinnerCriticidade);
 
                     tarefa.salvarTarefa();
-                } else{
+                    //levando para os metodos basedos na seleção do spinner
+                    if(metodos1.equals("FlashCards")){
+                        Intent intent = new Intent(getApplicationContext(),FlashCardsActivity.class);
+                        Bundle parametros = new Bundle();
+                        parametros.putString("chave_nomeTarefa", nomeTarefa);
+                        intent.putExtras(parametros);
+                        startActivity(intent);
+                        Toast.makeText(getApplicationContext(), metodos1, Toast.LENGTH_SHORT ).show();
+                    }if(metodos1.equals("Pomodoro")){
+                        Intent intent = new Intent(getApplicationContext(),PomodoroActivity.class);
+                        startActivity(intent);
+                        Toast.makeText(getApplicationContext(), metodos1, Toast.LENGTH_SHORT ).show();
+                    }
+                }else{
                     Toast.makeText(TarefaActivity.this,
                             "A Disciplina não foi preenchida!",
                             Toast.LENGTH_SHORT).show();
                 }
-
             }else{
                 Toast.makeText(TarefaActivity.this,
                         "Nome da Tarefa não foi preenchido!",
                         Toast.LENGTH_SHORT).show();
             }
 
-
-
-            //levando para os metodos basedos na seleção do spinner
-            if(metodos1.equals("FlashCards")){
-                Intent intent = new Intent(getApplicationContext(),FlashCardsActivity.class);
-                startActivity(intent);
-                Toast.makeText(getApplicationContext(), metodos1, Toast.LENGTH_SHORT ).show();
-            }if(metodos1.equals("Pomodoro")){
-                Intent intent = new Intent(getApplicationContext(),PomodoroActivity.class);
-                startActivity(intent);
-                Toast.makeText(getApplicationContext(), metodos1, Toast.LENGTH_SHORT ).show();
-            }
-
         });
 
         //volta a menu principal do app
-        findViewById(R.id.floatingActionButtonVoltar).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.voltaPrincipalFlashCards).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), PrincipalActivity.class);
@@ -101,5 +105,6 @@ public class TarefaActivity extends AppCompatActivity {
             }
         });
     }
+
 
 }
