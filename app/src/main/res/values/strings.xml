@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">EnsinaMente</string>
     <string name="title_activity_principal">PrincipalActivity</string>
-    <string-array name="aticity_metodo">
+    <string-array name="activity_metodo">
         <item>"FlashCards"</item>
         <item>"Pomodoro"</item>
     </string-array>
 
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Ensina Mente</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="second_fragment_label">Ensina Mente</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
@@ -45,7 +45,7 @@
     <string name="flashcards">FlashCards</string>
     <string name="todo5">TODO</string>
     <string name="todo7">TODO</string>
-    <string name="todo">TODO</string>
+    <string name="todo0">TODO</string>
     <string name="pomodoro">Pomodoro</string>
     <string name="string_pomodoro" />
     <string name="Pomodoro">Pomodoro</string>
@@ -63,4 +63,27 @@
     <string name="email">Email</string>
     <string name="acesse_sua_conta">Acesse sua conta</string>
     <string name="entrar">Entrar</string>
+    <string name="vamos_come_ar_os_estudos">Vamos começar os estudos</string>
+    <string name="fa_a_sempre_o_seu_melhor">Faça sempre o seu melhor!</string>
+    <string name="ok2">ok</string>
+    <string name="todo1">TODO</string>
+    <string name="ok0">ok</string>
+    <string name="button2">Button</string>
+    <string name="utilizando_met_dos_n_e_t_cnicas_de_estudo">Utilizando Metódos \n e Técnicas de Estudo</string>
+    <string name="aprenda_de_forma_simples_e_f_cil">Aprenda de forma simples e fácil</string>
+    <string name="todo">TODO</string>
+    <string name="button">Button</string>
+    <string name="ok">ok</string>
+    <string name="acessar_tarefas">Acessar Tarefas</string>
+    <string name="crie_sua_conta_gratuitamente">Crie sua conta gratuitamente</string>
+    <string name="cart_o_basico">Cartão Basico</string>
+    <string name="cart_es_basicos">Cartões Basicos</string>
+    <string name="nome_tarefa">Nome Tarefa</string>
+    <string name="textview3">TextView</string>
+    <string name="frente3">Frente</string>
+    <string name="textview2">TextView</string>
+    <string name="todoO">TODO</string>
+    <string name="todo00">TODO</string>
+    <string name="todo001">TODO</string>
+    <string name="todo002">TODO</string>
 </resources>

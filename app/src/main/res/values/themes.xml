@@ -41,9 +41,12 @@
     <style name="Theme.EnsinaMente.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimaryTarefa</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkTarefa</item>
+        <item name="colorAccent">@color/colorAccentTarefa</item>
     </style>
 
-    <style name="Theme.EnsinaMente.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.EnsinaMente.AppBarOverlay" parent="ThemeOverlay.AppCompat.DayNight.ActionBar" />
 
     <style name="Theme.EnsinaMente.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

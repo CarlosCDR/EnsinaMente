@@ -5,7 +5,9 @@ import com.example.ensinamente.helper.Base64Custom;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 
-public class FlashCards {
+import java.io.Serializable;
+
+public class FlashCards implements Serializable{
     private String nomeTarefa;
     private String frente;
     private String verso;

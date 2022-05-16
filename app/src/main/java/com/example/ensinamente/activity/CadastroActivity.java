@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -29,7 +30,7 @@ public class CadastroActivity extends AppCompatActivity {
     private Button botaoCadastrar;
     private FirebaseAuth autenticacao;
     private Usuario usuario;
-
+    private ImageButton voltar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +40,7 @@ public class CadastroActivity extends AppCompatActivity {
         campoEmail = findViewById(R.id.editEmail);
         campoSenha = findViewById(R.id.editSenha);
         botaoCadastrar = findViewById(R.id.buttonCadastrar);
-
+        voltar = findViewById(R.id.imageVoltar);
 
         botaoCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +79,9 @@ public class CadastroActivity extends AppCompatActivity {
 
             }
         });
+        voltar.setOnClickListener(view -> {
+            voltar();
+        });
     }
 
     public void cadastrarUsuario(){
@@ -115,5 +119,9 @@ public class CadastroActivity extends AppCompatActivity {
                   }
               }
           });
+    }
+
+    public void voltar(){
+        onBackPressed();
     }
 }

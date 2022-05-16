@@ -20,6 +20,8 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.ensinamente.R;
 import com.example.ensinamente.config.ConfiguracaoFireBase;
 import com.example.ensinamente.databinding.ActivityPrincipalBinding;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class PrincipalActivity extends AppCompatActivity {
@@ -30,6 +32,7 @@ public class PrincipalActivity extends AppCompatActivity {
     Spinner activityMetodo,
             activityCriticidade;
 
+    private GoogleSignInClient mGoogleSignInClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,10 +96,13 @@ public class PrincipalActivity extends AppCompatActivity {
     }
     public void deslogarUsuario(){
          try{
-             autenticacao.signOut();
+             //autenticacao.signOut();
+             autenticacao.getInstance().signOut();
+             this.finishAffinity();
          }catch (Exception e){
                e.printStackTrace();
          }
+
     }
 
     @Override

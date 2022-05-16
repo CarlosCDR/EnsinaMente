@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "442949868033",
-    "project_id": "ensina-mente-39a68",
-    "storage_bucket": "ensina-mente-39a68.appspot.com"
+    "project_number": "84364552072",
+    "project_id": "ensina-mente-4b7b3",
+    "storage_bucket": "ensina-mente-4b7b3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:442949868033:android:241eb6ff06134188703e00",
+        "mobilesdk_app_id": "1:84364552072:android:8ef026edb22887b7117c3d",
         "android_client_info": {
           "package_name": "com.example.ensinamente"
         }
       },
       "oauth_client": [
         {
-          "client_id": "442949868033-3tbovsmu1nhergsek9fghuacgc4p50t7.apps.googleusercontent.com",
+          "client_id": "84364552072-44p3u7sh6nc0uuh4q5rk4jh91cm9q74h.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.ensinamente",
-            "certificate_hash": "f399ee628aa496856984cadea1210a5865f9d5a5"
+            "certificate_hash": "5c27e753102457de7391f9fa30afbd672dbd8ea2"
           }
         },
         {
-          "client_id": "442949868033-f3l31q0haaeadiitrm826mf8uefmv4ul.apps.googleusercontent.com",
+          "client_id": "84364552072-410g05ao1gafs4spq1cm66hi0561tigl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDsjArJxX70K5t5FG71GjKnPkjspnpjM4I"
+          "current_key": "AIzaSyB39qrNW8NVSLAt8YSuvQwjL343650gZkw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "442949868033-f3l31q0haaeadiitrm826mf8uefmv4ul.apps.googleusercontent.com",
+              "client_id": "84364552072-410g05ao1gafs4spq1cm66hi0561tigl.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

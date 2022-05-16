@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -35,7 +34,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 
-
 public class MainActivity extends IntroActivity {
 
     private FirebaseAuth autenticacao;
@@ -49,19 +47,23 @@ public class MainActivity extends IntroActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //recupera o token
+
+        //recupera o token do cliente Auth2.0 recebido do googlecloud
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken("442949868033-f3l31q0haaeadiitrm826mf8uefmv4ul.apps.googleusercontent.com")
+                .requestIdToken("84364552072-410g05ao1gafs4spq1cm66hi0561tigl.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
 
+        //instanciando a autenticação Firebase e o Cliente Google
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
         autenticacao = FirebaseAuth.getInstance();
 
+        //chama o metodo logar com o google
         findViewById(R.id.signInButton).setOnClickListener(view -> {
            signIn();
         });
 
+        //recebe e retorna o token para logar com o facebook
         mCallbackManager = CallbackManager.Factory.create();
         LoginButton loginButton = findViewById(R.id.btnFacebook);
         loginButton.setReadPermissions("email", "public_profile");
@@ -83,20 +85,18 @@ public class MainActivity extends IntroActivity {
             }
         });
 
-
     }
 
-    //utiliza o metodo de verificação de usuario
+    //Verifica se o usuário esta logado
     public void onStart(){
         super.onStart();
         verificarUsuarioLogado();
-        //FirebaseUser currentUser = autenticacao.getCurrentUser();
-        //updateUI(currentUser);
+        FirebaseUser currentUser = autenticacao.getCurrentUser();
+        updateUI(currentUser);
     }
 
-
-    //Metodo de Login com o google
-    //abri o google intent
+    //METODOS DE LOGIN COM GOOGLE
+    //abri o google intent para o usuário conectar sua conta google
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         //startActivityForResult(signInIntent, 1);
@@ -120,7 +120,7 @@ public class MainActivity extends IntroActivity {
             }
     );
 
-
+    //efetua o login com o google se o token for valido
     private void loginComGoogle(String token){
         AuthCredential credencial = GoogleAuthProvider.getCredential(token, null);
 
@@ -128,7 +128,7 @@ public class MainActivity extends IntroActivity {
             if(task.isSuccessful()){
                 Toast.makeText(this,
                         "login com Google efetuado com sucesso!", Toast.LENGTH_SHORT).show();
-                abrirTelaPrincipal();
+                startActivity(new Intent(this, IntroducaoActivity.class));
                 finish();
             }else{
                 Toast.makeText(this,
@@ -138,6 +138,7 @@ public class MainActivity extends IntroActivity {
         });
     }
 
+    //verifica se o token foi recebido com sucesso
     public void onActivityResult(int requestCode, int resultCode, Intent intent){
         super.onActivityResult(requestCode, resultCode, intent);
 
@@ -155,6 +156,8 @@ public class MainActivity extends IntroActivity {
         mCallbackManager.onActivityResult(requestCode, resultCode, intent);
     }
 
+    //METODOS DE LOGIN COM FACEBOOK
+    //recebe o token e retorna ele
     private void handleFacebookAccessToken(AccessToken token) {
         Log.d(TAG, "handleFacebookAccessToken:" + token);
 
@@ -179,34 +182,35 @@ public class MainActivity extends IntroActivity {
                 });
     }
 
+    //verifica se o token do usuário e valido e logar ele no app
     private void updateUI(FirebaseUser user) {
         FirebaseUser users = FirebaseAuth.getInstance().getCurrentUser();
         if (users != null) {
             // User is signed in
-            Intent i = new Intent(MainActivity.this, PrincipalActivity.class);
+            Intent i = new Intent(MainActivity.this, IntroducaoActivity.class);
             startActivity(i);
             finish();
-            Toast.makeText(MainActivity.this, "Login com Facebook efetuado com Sucesso", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Login efetuado com Sucesso", Toast.LENGTH_SHORT).show();
         } else {
 
             // No user is signed in
         }
     }
 
-    //metodos de cadastro e login
+    //chama activity de login
     public void btEntra(View view){
         startActivity(new Intent(this, LoginActivity.class));
     }
 
+    //chama  a activity para poder cadastrar o usuário
     public void btCadastra(View view){
         startActivity(new Intent(this, CadastroActivity.class));
     }
 
     //verificando se o usuario esta realmente logado
     public void verificarUsuarioLogado(){
-        //autenticacao = ConfiguracaoFireBase.getFireBaseAutenticacao();
-        //autenticacao.signOut();
-        //autenticacao.getInstance().signOut();
+        autenticacao = ConfiguracaoFireBase.getFireBaseAutenticacao();
+
         if(autenticacao.getCurrentUser() != null){
             abrirTelaPrincipal();
         }

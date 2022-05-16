@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -30,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     private Usuario usuario;
     private FirebaseAuth autenticacao;
     private GoogleSignInClient mGoogleSignInClient;
-
+    private ImageButton voltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         campoEmail = findViewById(R.id.editEmail);
         campoSenha = findViewById(R.id.editSenha);
         botaoEntrar = findViewById(R.id.buttonEntrar);
+        voltar = findViewById(R.id.buttonVoltar);
 
         botaoEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +71,9 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
-
+        voltar.setOnClickListener(view -> {
+            voltar();
+        });
     }
 
     public void validarLogin(){
@@ -108,8 +112,12 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void abrirTelaPrincipal(){
-         startActivity(new Intent(this, PrincipalActivity.class));
+         startActivity(new Intent(this,IntroducaoActivity.class));
          finish();
+    }
+
+    public void voltar(){
+        onBackPressed();
     }
 
 }

@@ -12,14 +12,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EnsinaMente">
         <activity
-            android:name=".activity.CartaoInvertidoActivity"
+            android:name=".activity.FlipAnimationInvertidoActivity"
             android:exported="false" />
+        <activity
+            android:name=".activity.CartaoInvertidoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EnsinaMente.NoActionBar" />
+        <activity
+            android:name=".activity.FlipAnimationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EnsinaMente.NoActionBar" />
+        <activity
+            android:name=".activity.IntroducaoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EnsinaMente.NoActionBar" />
         <activity
             android:name=".activity.CartaoBasicoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.EnsinaMente.NoActionBar" />
         <activity
             android:name=".activity.PomodoroActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.EnsinaMente.NoActionBar"/>
         <activity
             android:name=".activity.FlashCardsActivity"
             android:exported="false"
@@ -37,8 +51,10 @@
             android:exported="false"
             android:label="@string/title_activity_principal"
             android:theme="@style/Theme.EnsinaMente.NoActionBar" />
-        <activity android:name=".activity.CadastroActivity" />
-        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.CadastroActivity"
+            android:theme="@style/Theme.EnsinaMente.NoActionBar"/>
+        <activity android:name=".activity.LoginActivity"
+            android:theme="@style/Theme.EnsinaMente.NoActionBar"/>
         <activity
             android:name=".activity.MainActivity"
             android:exported="true"
