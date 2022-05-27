@@ -3,26 +3,38 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable-v24/btn_end.xml" value="0.298" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable-v24/btn_start_ground.xml" value="0.298" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable-v24/circle_bar.xml" value="0.298" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable-v24/circle_mints.xml" value="0.298" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/background_item.xml" value="0.3345" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/borda.xml" value="0.2355" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/borda_red.xml" value="0.298" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/ic_adicionar_branco_24dp.xml" value="0.2985" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/ic_black_arrow_back_24.xml" value="0.298" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/ic_confirmar_branco_24.xml" value="0.2985" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/ic_delete_vermelho_24.xml" value="0.2985" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/ic_vermelho_24.xml" value="0.2985" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_cadastro.xml" value="0.33" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_cartao_basico.xml" value="0.24022346368715083" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_cartao_invertido.xml" value="0.34148550724637683" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_clock.xml" value="0.35597826086956524" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_escolha_metodos.xml" value="0.3625" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_facebook_auth.xml" value="0.16770833333333332" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_flash_cards.xml" value="0.33" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_flip_animation.xml" value="0.34148550724637683" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_flip_animation_invertido.xml" value="0.35597826086956524" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_intro.xml" value="0.21770833333333334" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_introducao.xml" value="0.34148550724637683" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_lista_metas.xml" value="0.3625" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_lista_tarefas.xml" value="0.346875" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_login.xml" value="0.35643115942028986" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_main2.xml" value="0.346875" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_meta.xml" value="0.33" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_pomodoro.xml" value="0.25" />
-        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_principal.xml" value="0.22" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_pomodoro_home.xml" value="0.35597826086956524" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_principal.xml" value="0.33" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_tarefa2.xml" value="0.25" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_teste_google.xml" value="0.346875" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/cartoes.xml" value="0.5" />
@@ -35,6 +47,11 @@
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/intro_2.xml" value="0.35643115942028986" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/intro_3.xml" value="0.35643115942028986" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/intro_cadastro.xml" value="0.25" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/item_fragment.xml" value="0.67" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/item_metas.xml" value="0.67" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/item_tarefa.xml" value="0.33" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/itens_tarefas.xml" value="0.3625" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/show_dialog.xml" value="0.35597826086956524" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/menu/menu_main.xml" value="0.3625" />
       </map>
     </option>

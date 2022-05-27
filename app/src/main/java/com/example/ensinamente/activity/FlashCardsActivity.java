@@ -43,6 +43,7 @@ public class FlashCardsActivity extends AppCompatActivity {
     private String recebeNovoNomeTarefa;
     private TextView visualizarCartoes;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,7 +89,6 @@ public class FlashCardsActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
 
-
         });
 
         visualizarCartoes.setOnClickListener(new View.OnClickListener() {
@@ -126,9 +126,10 @@ public class FlashCardsActivity extends AppCompatActivity {
         });
 
         //volta a menu principal do app
-        findViewById(R.id.voltaPrincipalFlashCards).setOnClickListener(view -> {
+        findViewById(R.id.imageViewVoltaPrincipalFlashCards).setOnClickListener(view -> {
             startActivity(new Intent(this, PrincipalActivity.class));
             finish();
+            onBackPressed();
         });
 
     }
@@ -161,11 +162,9 @@ public class FlashCardsActivity extends AppCompatActivity {
                     }else {
                         salvaTarefa();
                     }
-
                 }
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) { }
-
             });
 
     }
@@ -210,5 +209,6 @@ public class FlashCardsActivity extends AppCompatActivity {
         }
 
     }
+
 
 }

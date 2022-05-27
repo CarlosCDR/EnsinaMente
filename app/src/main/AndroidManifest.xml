@@ -5,12 +5,33 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".activity.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EnsinaMente">
+        <activity
+            android:name=".activity.EscolhaMetodosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ListaMetasActivity"
+            android:exported="false"
+            android:theme="@style/metas"/>
+        <activity
+            android:name=".activity.ListaTarefasActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EnsinaMente.NoActionBar"/>
+        <activity
+            android:name=".activity.ClockActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/metodoPomodoro" />
+        <activity
+            android:name=".activity.PomodoroHomeActivity"
+            android:exported="false"
+            android:theme="@style/metodoPomodoro" />
         <activity
             android:name=".activity.FlipAnimationInvertidoActivity"
             android:exported="false" />
@@ -33,7 +54,7 @@
         <activity
             android:name=".activity.PomodoroActivity"
             android:exported="false"
-            android:theme="@style/Theme.EnsinaMente.NoActionBar"/>
+            android:theme="@style/Theme.EnsinaMente.NoActionBar" />
         <activity
             android:name=".activity.FlashCardsActivity"
             android:exported="false"
@@ -51,10 +72,12 @@
             android:exported="false"
             android:label="@string/title_activity_principal"
             android:theme="@style/Theme.EnsinaMente.NoActionBar" />
-        <activity android:name=".activity.CadastroActivity"
-            android:theme="@style/Theme.EnsinaMente.NoActionBar"/>
-        <activity android:name=".activity.LoginActivity"
-            android:theme="@style/Theme.EnsinaMente.NoActionBar"/>
+        <activity
+            android:name=".activity.CadastroActivity"
+            android:theme="@style/Theme.EnsinaMente.NoActionBar" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/Theme.EnsinaMente.NoActionBar" />
         <activity
             android:name=".activity.MainActivity"
             android:exported="true"

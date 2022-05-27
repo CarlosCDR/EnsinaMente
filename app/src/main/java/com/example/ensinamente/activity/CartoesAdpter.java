@@ -16,9 +16,6 @@ import java.util.List;
 public class CartoesAdpter extends RecyclerView.Adapter {
 
     List<FlashCards> cartoes;
-    private View viewOnCreate;
-    TextView frente;
-    TextView verso;
     private OnRecyclerViewClickListener listener;
 
     public interface OnRecyclerViewClickListener{

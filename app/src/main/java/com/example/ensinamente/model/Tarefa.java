@@ -5,6 +5,8 @@ import com.example.ensinamente.helper.Base64Custom;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 
+import java.util.List;
+
 public class Tarefa {
 
     private String nomeTarefa;
@@ -12,9 +14,6 @@ public class Tarefa {
     private String metodo;
     private String criticidadeTarefa;
 
-
-    public Tarefa() {
-    }
 
     public void salvarTarefa(){
 

@@ -187,7 +187,7 @@ public class MainActivity extends IntroActivity {
         FirebaseUser users = FirebaseAuth.getInstance().getCurrentUser();
         if (users != null) {
             // User is signed in
-            Intent i = new Intent(MainActivity.this, IntroducaoActivity.class);
+            Intent i = new Intent(MainActivity.this, PrincipalActivity.class);
             startActivity(i);
             finish();
             Toast.makeText(MainActivity.this, "Login efetuado com Sucesso", Toast.LENGTH_SHORT).show();
@@ -218,7 +218,8 @@ public class MainActivity extends IntroActivity {
 
     //abri tela principal do app
     public void abrirTelaPrincipal(){
-        startActivity(new Intent(this, PrincipalActivity.class));
+        startActivity(new Intent(this, IntroducaoActivity.class));
     }
+
 
 }

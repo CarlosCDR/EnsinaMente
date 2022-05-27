@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import androidx.navigation.NavController;
@@ -31,8 +32,8 @@ public class PrincipalActivity extends AppCompatActivity {
     private ActivityPrincipalBinding binding;
     Spinner activityMetodo,
             activityCriticidade;
+    private Button acessarTarefas;
 
-    private GoogleSignInClient mGoogleSignInClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +51,15 @@ public class PrincipalActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_principal);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        acessarTarefas = findViewById(R.id.buttonAcessaTarefas);
 
+        acessarTarefas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ListaTarefasActivity.class);
+                startActivity(intent);
+            }
+        });
         /*findViewById(R.id.floatingCadastraTarefa).setOnClickListener(view -> {
             startActivity(new Intent(this,FlashCardsActivity.class));
         });*/
@@ -79,6 +88,18 @@ public class PrincipalActivity extends AppCompatActivity {
                  deslogarUsuario();
                  finish();
                 break;
+            case R.id.tarefas:
+                 startActivity(new Intent(this, ListaTarefasActivity.class));
+                 finish();
+                 break;
+            case R.id.visualizarMetas:
+                 startActivity(new Intent(this, ListaMetasActivity.class));
+                 finish();
+                 break;
+            case R.id.visualizarMetodos:
+                 startActivity(new Intent(this, EscolhaMetodosActivity.class));
+                 finish();
+                 break;
 
         }
         return super.onOptionsItemSelected(item);
@@ -92,6 +113,10 @@ public class PrincipalActivity extends AppCompatActivity {
     }
     public void metodoFlashCards(View view){
         startActivity(new Intent(this, FlashCardsActivity.class));
+
+    }
+    public void metodoPomodoro(View view){
+        startActivity(new Intent(this, PomodoroActivity.class));
 
     }
     public void deslogarUsuario(){
@@ -110,5 +135,12 @@ public class PrincipalActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_principal);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finishAffinity();
+        System.exit(0);
     }
 }

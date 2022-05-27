@@ -5,6 +5,9 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2196F3"
+    android:backgroundTint="#2196F3"
+    android:backgroundTintMode="multiply"
     android:orientation="vertical">
 
     <ImageView
@@ -27,8 +30,8 @@
         android:layout_marginBottom="8dp"
         android:gravity="center"
         android:text="Aprenda de forma simples e fácil"
-        android:textColor="@android:color/black"
         android:textAlignment="center"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"

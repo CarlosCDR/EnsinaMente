@@ -28,6 +28,7 @@ public class TarefaActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private DatabaseReference firebaseRef = ConfiguracaoFireBase.getFirebaseDatabase();
     private String textoNomeTarefa;
+    private List<Tarefa> tarefas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,11 +98,12 @@ public class TarefaActivity extends AppCompatActivity {
         });
 
         //volta a menu principal do app
-        findViewById(R.id.voltaPrincipalFlashCards).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.imageViewVoltaPrincipalFlashCards).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), PrincipalActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

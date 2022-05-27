@@ -21,8 +21,18 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_principal" />
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_principal" />
 
+
+    <Button
+        android:id="@+id/buttonAcessaTarefas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acessar Tarefas"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="center" />
 
     <com.github.clans.fab.FloatingActionMenu
         android:layout_width="wrap_content"
@@ -61,6 +71,15 @@
             android:src="@drawable/ic_adicionar_branco_24dp"
             app:fab_colorNormal="@color/purple_700"
             fab:fab_label="FlashCards"
+            fab:fab_size="mini" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/pomodoro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="metodoPomodoro"
+            android:src="@drawable/ic_adicionar_branco_24dp"
+            app:fab_colorNormal="@color/purple_700"
+            fab:fab_label="Pomodoro"
             fab:fab_size="mini" />
 
     </com.github.clans.fab.FloatingActionMenu>

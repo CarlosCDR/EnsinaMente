@@ -45,6 +45,20 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDarkTarefa</item>
         <item name="colorAccent">@color/colorAccentTarefa</item>
     </style>
+    <style name="metodoPomodoro" parent="Theme.AppCompat.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorAccentMeta</item>
+        <item name="colorPrimaryDark">@color/colorAccentMeta</item>
+        <item name="colorAccent">@color/colorAccentMeta</item>
+    </style>
+    <style name="metas" parent="Theme.AppCompat.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorMetas</item>
+        <item name="colorPrimaryDark">@color/colorMetas</item>
+        <item name="colorAccent">@color/colorMetas</item>
+    </style>
 
     <style name="Theme.EnsinaMente.AppBarOverlay" parent="ThemeOverlay.AppCompat.DayNight.ActionBar" />
 
