@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sea"
+    android:background="@drawable/messenger_button_blue_bg_selector"
     tools:context="com.example.ensinamente.activity.CadastroActivity">
 
     <TextView
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="@string/crie_sua_conta_gr_tis"
-        android:textColor="@android:color/black"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,11 +121,11 @@
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/borda"
+        android:contentDescription="@string/todo002"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_botaovoltar_black_24"
-        android:contentDescription="@string/todo002" />
+        app:srcCompat="@drawable/ic_botaovoltar_black_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

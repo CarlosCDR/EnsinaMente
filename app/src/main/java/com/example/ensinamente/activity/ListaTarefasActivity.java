@@ -39,7 +39,6 @@ public class ListaTarefasActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     TarefaAdpter tarefasAdpter;
     DatabaseReference databaseReference;
-    private DatabaseReference firebaseRef = ConfiguracaoFireBase.getFirebaseDatabase();
     private FirebaseAuth autenticacao = ConfiguracaoFireBase.getFireBaseAutenticacao();
     private Button voltar;
 
@@ -74,8 +73,17 @@ public class ListaTarefasActivity extends AppCompatActivity {
                                     tarefasAdpter.OnRecyclerViewClickListener(new TarefaAdpter.OnRecyclerViewClickListener() {
                                         @Override
                                         public void OnItemClick(int position) {
-                                            Intent intent = new Intent(getApplicationContext(), EscolhaMetodosActivity.class);
+                                            String nomeTarefa = tarefas.get(position).getNomeTarefa();
+                                            String disciplina = tarefas.get(position).getDisciplina();
+                                            Intent intent = new Intent(getApplicationContext(),EditarTarefaActivity.class);
+                                            Bundle parametros = new Bundle();
+                                            parametros.putString("chave_nomeTarefa", nomeTarefa);
+                                            parametros.putString("chave_disciplina", disciplina);
+                                            intent.putExtras(parametros);
                                             startActivity(intent);
+                                            finish();
+                                            //Intent intent = new Intent(getApplicationContext(), EditarTarefaActivity.class);
+                                            //startActivity(intent);
                                         }
                                     });
 
@@ -92,10 +100,6 @@ public class ListaTarefasActivity extends AppCompatActivity {
                                 "Nenhuma Tarefa Cadastrada!",
                                 Toast.LENGTH_SHORT).show();
                     }
-
-
-
-
 
             }
             @Override

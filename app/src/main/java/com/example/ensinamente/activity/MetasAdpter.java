@@ -17,6 +17,16 @@ import java.util.List;
 public class MetasAdpter extends RecyclerView.Adapter {
 
     List<Meta> metas;
+    private OnRecyclerViewClickListener listener;
+
+
+    public interface OnRecyclerViewClickListener{
+        void OnItemClick(int position);
+    }
+
+    public void OnRecyclerViewClickListener (OnRecyclerViewClickListener listener){
+        this.listener = listener;
+    }
 
     public MetasAdpter(List<Meta> metas) {
         this.metas = metas;
@@ -26,7 +36,7 @@ public class MetasAdpter extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_metas, parent, false);
-        ViewHolderClass vhClass = new ViewHolderClass(view);
+        ViewHolderClass vhClass = new ViewHolderClass(view, listener);
         return vhClass;
     }
 
@@ -48,11 +58,19 @@ public class MetasAdpter extends RecyclerView.Adapter {
         TextView tvRecebeNomeTafMeta;
         TextView tvRecebeMotivacaoMeta;
         TextView tvRecebeDataMeta;
-        public ViewHolderClass(@NonNull View itemView) {
+        public ViewHolderClass(@NonNull View itemView, OnRecyclerViewClickListener listener) {
             super(itemView);
             tvRecebeNomeTafMeta = itemView.findViewById(R.id.tvNomeTarefaMeta);
             tvRecebeMotivacaoMeta = itemView.findViewById(R.id.tvMotivacao);
             tvRecebeDataMeta = itemView.findViewById(R.id.tvData);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(listener != null && getAbsoluteAdapterPosition() != RecyclerView.NO_POSITION){
+                        listener.OnItemClick(getAbsoluteAdapterPosition());
+                    }
+                }
+            });
         }
     }
 }

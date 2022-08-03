@@ -63,19 +63,19 @@ public class FlashCardsActivity extends AppCompatActivity {
         //recebendo parametro com o nome da tarefa da  activity Tarefa
        if (parametros != null) {
             String nome = parametros.getString("chave_nomeTarefa");
-            campoNomeTarefa = findViewById(R.id.tarefaNome);
+            campoNomeTarefa = findViewById(R.id.tarefaDisciplina);
             campoNomeTarefa.setText(nome);
         }
 
         campoFrente = findViewById(R.id.frente);
         campoVerso = findViewById(R.id.verso);
-        campoNomeTarefa = findViewById(R.id.tarefaNome);
+        campoNomeTarefa = findViewById(R.id.tarefaDisciplina);
 
         recebeNomeTarefa = campoNomeTarefa.getText().toString();
 
-        findViewById(R.id.floatingActionFlashCards).setOnClickListener(view -> {
+        findViewById(R.id.floatingActionEditaTarefas).setOnClickListener(view -> {
 
-            campoNomeTarefa = findViewById(R.id.tarefaNome);
+            campoNomeTarefa = findViewById(R.id.tarefaDisciplina);
             recebeNovoNomeTarefa = campoNomeTarefa.getText().toString();
 
             if( recebeNovoNomeTarefa != recebeNomeTarefa){

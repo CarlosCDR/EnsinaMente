@@ -6,11 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.ensinamente.R;
 import com.example.ensinamente.model.Meta;
-import com.example.ensinamente.model.Usuario;
 
 public class MetaActivity extends AppCompatActivity {
 
@@ -25,25 +25,25 @@ public class MetaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(com.example.ensinamente.R.layout.activity_meta);
 
-         campoNomeTarefa = findViewById(R.id.nomeTarefaMeta);
+         campoNomeTarefa = findViewById(R.id.nomeTarefa);
          campoMotivacao = findViewById(R.id.motivacaoTarefa);
          campoData = findViewById(R.id.data);
 
 
-        findViewById(R.id.floatingCadastraMeta).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.floatingEditarMetas).setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view){
                 String textoNomeTarefa = campoNomeTarefa.getText().toString();
                 String textoMotivacao = campoMotivacao.getText().toString();
                 String textoData = campoData.getText().toString();
-
+                String nomeTarefa = textoNomeTarefa;
                   if(!textoNomeTarefa.isEmpty()){
                       meta = new Meta();
                       meta.setNomeTarefa(textoNomeTarefa);
                       meta.setMotivacao(textoMotivacao);
                       meta.setData(textoData);
-                      salvar();
+                      salvar(nomeTarefa);
                   }else{
                       Toast.makeText(MetaActivity.this,
                               "Nome tarefa não foi preenchido!",
@@ -61,14 +61,14 @@ public class MetaActivity extends AppCompatActivity {
     }
 
     //salva  a meta do usuário
-    public void salvar(){
+    public void salvar(String nomeTarefa){
 
        meta = new Meta();
        meta.setNomeTarefa(campoNomeTarefa.getText().toString());
        meta.setMotivacao(campoMotivacao.getText().toString());
        meta.setData(campoData.getText().toString());
 
-       meta.salvarMeta();
+       meta.salvarMeta(nomeTarefa);
 
         Toast.makeText(this,
                 "Meta cadastrada, agora e com você!", Toast.LENGTH_SHORT).show();

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background_item">
+    android:background="@drawable/side_nav_bar">
 
 
     <item android:id="@+id/visualizarMetas"
@@ -19,10 +19,6 @@
         />
     <item android:id="@+id/visualizarMetodos"
         android:title="Visualizar Metódos e Técnicas"
-        app:showAsAction="never"
-        />
-    <item android:id="@+id/configuracoes"
-        android:title="Configurações"
         app:showAsAction="never"
         />
     <item android:id="@+id/menuSair"

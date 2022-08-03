@@ -14,7 +14,7 @@ public class Meta {
     public Meta() {
     }
 
-    public void salvarMeta(){
+    public void salvarMeta(String nomeTarefa){
 
         FirebaseAuth autenticacao = ConfiguracaoFireBase.getFireBaseAutenticacao();
         String idUsuario = Base64Custom.codificarBase64(autenticacao.getCurrentUser().getEmail());
@@ -22,7 +22,7 @@ public class Meta {
         DatabaseReference firebase = ConfiguracaoFireBase.getFirebaseDatabase();
         firebase.child("meta")
                 .child( idUsuario )
-                .push()
+                .child(nomeTarefa)
                 .setValue(this);
     }
 

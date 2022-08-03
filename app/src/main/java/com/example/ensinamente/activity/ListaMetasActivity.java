@@ -56,6 +56,22 @@ public class ListaMetasActivity extends AppCompatActivity {
                             }
                             metasAdpter = new MetasAdpter(metas);
                             recyclerView.setAdapter(metasAdpter);
+                            metasAdpter.OnRecyclerViewClickListener(new MetasAdpter.OnRecyclerViewClickListener() {
+                                @Override
+                                public void OnItemClick(int position) {
+                                    String nomeTarefa = metas.get(position).getNomeTarefa();
+                                    String motivacao = metas.get(position).getMotivacao();
+                                    String data = metas.get(position).getData();
+                                    Intent intent = new Intent(getApplicationContext(),EditarMetaActivity.class);
+                                    Bundle parametros = new Bundle();
+                                    parametros.putString("chave_nomeTarefa", nomeTarefa);
+                                    parametros.putString("chave_motivacao", motivacao);
+                                    parametros.putString("chave_data", data);
+                                    intent.putExtras(parametros);
+                                    startActivity(intent);
+                                    finish();
+                                }
+                            });
                         }
 
                         @Override

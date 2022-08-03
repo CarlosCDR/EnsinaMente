@@ -44,15 +44,19 @@ public class EscolhaMetodosActivity extends AppCompatActivity {
 
     public void imageViewFlashCards(){
         startActivity(new Intent(this, FlashCardsActivity.class));
+        finish();
     }
     public void imageViewPomodoro(){
         startActivity(new Intent(this, PomodoroActivity.class));
+        finish();
     }
     public void tvFlashCards(){
         startActivity(new Intent(this, FlashCardsActivity.class));
+        finish();
     }
     public void tvPomodoro(){
         startActivity(new Intent(this, PomodoroActivity.class));
+        finish();
     }
 
 

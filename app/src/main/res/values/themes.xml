@@ -41,6 +41,7 @@
     <style name="Theme.EnsinaMente.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:itemBackground">@color/colorPrimary</item>
         <item name="colorPrimary">@color/colorPrimaryTarefa</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkTarefa</item>
         <item name="colorAccent">@color/colorAccentTarefa</item>
@@ -59,7 +60,10 @@
         <item name="colorPrimaryDark">@color/colorMetas</item>
         <item name="colorAccent">@color/colorMetas</item>
     </style>
-
+    <style name="semBarra" parent="Theme.AppCompat.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
     <style name="Theme.EnsinaMente.AppBarOverlay" parent="ThemeOverlay.AppCompat.DayNight.ActionBar" />
 
     <style name="Theme.EnsinaMente.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

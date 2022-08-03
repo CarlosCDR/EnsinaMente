@@ -13,16 +13,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EnsinaMente">
         <activity
+            android:name=".activity.EditarMetaActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EnsinaMente.NoActionBar"/>
+        <activity
+            android:name=".activity.EditarTarefaActivity"
+            android:exported="false"
+            android:theme="@style/Theme.EnsinaMente.NoActionBar" />
+        <activity
             android:name=".activity.EscolhaMetodosActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/semBarra" />
         <activity
             android:name=".activity.ListaMetasActivity"
             android:exported="false"
-            android:theme="@style/metas"/>
+            android:theme="@style/metas" />
         <activity
             android:name=".activity.ListaTarefasActivity"
             android:exported="false"
-            android:theme="@style/Theme.EnsinaMente.NoActionBar"/>
+            android:theme="@style/Theme.EnsinaMente.NoActionBar" />
         <activity
             android:name=".activity.ClockActivity"
             android:exported="false"
@@ -34,7 +43,8 @@
             android:theme="@style/metodoPomodoro" />
         <activity
             android:name=".activity.FlipAnimationInvertidoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.EnsinaMente.NoActionBar" />
         <activity
             android:name=".activity.CartaoInvertidoActivity"
             android:exported="false"

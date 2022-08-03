@@ -54,7 +54,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tarefaNome"
+            android:id="@+id/tarefaDisciplina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/nome_da_tarefa"
@@ -77,7 +77,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionFlashCards"
+        android:id="@+id/floatingActionEditaTarefas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"

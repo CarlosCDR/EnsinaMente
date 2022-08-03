@@ -30,7 +30,8 @@
         android:id="@+id/buttonAcessaTarefas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Acessar Tarefas"
+        android:text="@string/acessar_tarefas"
+        android:textColor="#004D40"
         app:layout_anchor="@+id/include"
         app:layout_anchorGravity="center" />
 

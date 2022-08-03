@@ -90,15 +90,12 @@ public class PrincipalActivity extends AppCompatActivity {
                 break;
             case R.id.tarefas:
                  startActivity(new Intent(this, ListaTarefasActivity.class));
-                 finish();
                  break;
             case R.id.visualizarMetas:
                  startActivity(new Intent(this, ListaMetasActivity.class));
-                 finish();
                  break;
             case R.id.visualizarMetodos:
                  startActivity(new Intent(this, EscolhaMetodosActivity.class));
-                 finish();
                  break;
 
         }
@@ -141,6 +138,5 @@ public class PrincipalActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finishAffinity();
-        System.exit(0);
     }
 }

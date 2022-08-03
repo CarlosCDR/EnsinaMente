@@ -5,9 +5,11 @@ import com.example.ensinamente.helper.Base64Custom;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class Tarefa {
+
 
     private String nomeTarefa;
     private String disciplina;
@@ -15,7 +17,7 @@ public class Tarefa {
     private String criticidadeTarefa;
 
 
-    public void salvarTarefa(){
+    public void salvarTarefa(String nomeTarefa){
 
         FirebaseAuth autenticacao = ConfiguracaoFireBase.getFireBaseAutenticacao();
         String idUsuario = Base64Custom.codificarBase64( autenticacao.getCurrentUser().getEmail() );
@@ -23,9 +25,10 @@ public class Tarefa {
         DatabaseReference firebase = ConfiguracaoFireBase.getFirebaseDatabase();
         firebase.child("tarefa")
                 .child( idUsuario )
-                .push()
+                .child(nomeTarefa)
                 .setValue(this);
     }
+
 
 
     public String getNomeTarefa() {

@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/voltaPrincipaMeta"
+    android:id="@+id/disciplina"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#A51010"
     tools:context=".activity.MetaActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout6"
+        android:id="@+id/linearLayout5"
         android:layout_width="415dp"
         android:layout_height="120dp"
-        android:background="@color/colorPrimaryMeta"
+        android:background="@color/colorPrimaryTarefa"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="10dp"
@@ -22,40 +24,41 @@
         app:layout_constraintVertical_bias="0.0">
 
         <ImageView
-            android:id="@+id/imageViewVoltaListaMetas"
-            android:layout_width="60dp"
-            android:layout_height="30dp"
+            android:id="@+id/imageViewVoltaListaTarefas"
+            android:layout_width="73dp"
+            android:layout_height="27dp"
             android:layout_gravity="left"
-            app:srcCompat="@drawable/back" />
+            android:contentDescription="@string/todotvVoltaPrincipal"
+            fab:srcCompat="@drawable/back" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/crie_suas_metas_de_estudos_aqui"
+            android:text="Editar Tarefas"
             android:textColor="#0E0D0D"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
 
     </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
+        android:id="@+id/textInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="416dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6">
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nomeTarefa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/qual_o_nome_da_tarefa"
+            android:hint="@string/nome_da_tarefa"
             android:textColorHint="#546E7A"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck,TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -65,52 +68,59 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout7"
+        android:layout_marginBottom="336dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/motivacaoTarefa"
+            android:id="@+id/tarefaDisciplina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/qual_sua_motiva_o_de_estudo"
+            android:hint="@string/disciplina_ou_tipo_de_estudo"
             android:textColorHint="#546E7A"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout7"
-        android:layout_width="0dp"
+    <Spinner
+        android:id="@+id/spinner_tipos"
+        android:layout_width="378dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="113dp"
-        app:layout_constraintBottom_toTopOf="@+id/floatingEditarMetas"
+        android:layout_marginBottom="264dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout8">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout8"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/data"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/ex_31_08_2022"
-            android:textColorHint="#546E7A"
-            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
+    <Spinner
+        android:id="@+id/spinner_criticidade"
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="168dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_tipos"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingEditarMetas"
+        android:id="@+id/floatingActionEditaTarefas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="40dp"
         android:clickable="true"
         android:contentDescription="@string/todo"
         android:focusable="true"
@@ -118,21 +128,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_confirmar_branco_24"
-        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+        fab:srcCompat="@drawable/ic_confirmar_branco_24"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="95dp"
-        android:layout_height="106dp"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="159dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
-        app:srcCompat="@drawable/lideranca" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

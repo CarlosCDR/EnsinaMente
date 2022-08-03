@@ -10,6 +10,7 @@
     tools:context=".activity.MetaActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="415dp"
         android:layout_height="120dp"
         android:background="@color/colorPrimaryTarefa"
@@ -22,6 +23,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <ImageView
+            android:id="@+id/imageViewVoltaListaTarefas"
+            android:layout_width="73dp"
+            android:layout_height="27dp"
+            android:layout_gravity="left"
+            android:contentDescription="@string/todotvVoltaPrincipal"
+            fab:srcCompat="@drawable/back" />
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
@@ -30,24 +39,26 @@
             android:text="@string/crie_sua_tarefa"
             android:textColor="#0E0D0D"
             android:textSize="24sp" />
+
     </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="376dp"
+        android:layout_marginBottom="416dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nomeTarefaMeta"
+            android:id="@+id/nomeTarefa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/nome_da_tarefa"
+            android:hint="Nome da Tarefa (não e possivel alterar )"
             android:textColorHint="#546E7A"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck,TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -57,15 +68,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="296dp"
+        android:layout_marginBottom="336dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tarefaNome"
+            android:id="@+id/tarefaDisciplina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/disciplina_ou_tipo_de_estudo"
@@ -77,56 +90,62 @@
         android:id="@+id/spinner_tipos"
         android:layout_width="378dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="232dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="264dp"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout8"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Spinner
         android:id="@+id/spinner_criticidade"
         android:layout_width="378dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="168dp"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_tipos"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionFlashCards"
+        android:id="@+id/floatingActionEditaTarefas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="40dp"
         android:clickable="true"
         android:contentDescription="@string/todo"
         android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         fab:srcCompat="@drawable/ic_confirmar_branco_24"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,ImageContrastCheck,DuplicateSpeakableTextCheck" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/imageViewVoltaPrincipalFlashCards"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#C31212"
-        android:clickable="true"
-        android:contentDescription="@string/todo"
-        android:focusable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="111dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintHorizontal_bias="0.228"
         app:layout_constraintStart_toStartOf="parent"
-        fab:srcCompat="@drawable/ic_vermelho_24"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+        app:layout_constraintVertical_bias="0.571"
+        fab:srcCompat="@drawable/task"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/todotv" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
