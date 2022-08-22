@@ -5,13 +5,14 @@
     android:id="@+id/voltaPrincipaMeta"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#546BEA"
     tools:context=".activity.MetaActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout6"
         android:layout_width="415dp"
         android:layout_height="120dp"
-        android:background="@color/colorPrimaryMeta"
+        android:background="@android:color/holo_blue_dark"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="10dp"
@@ -34,7 +35,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/crie_suas_metas_de_estudos_aqui"
-            android:textColor="#0E0D0D"
+            android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
     </LinearLayout>

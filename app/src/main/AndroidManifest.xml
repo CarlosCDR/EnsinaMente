@@ -27,16 +27,16 @@
         <activity
             android:name=".activity.ListaMetasActivity"
             android:exported="false"
-            android:theme="@style/metas" />
+            android:theme="@style/cadastro" />
         <activity
             android:name=".activity.ListaTarefasActivity"
             android:exported="false"
-            android:theme="@style/Theme.EnsinaMente.NoActionBar" />
+            android:theme="@style/cadastro" />
         <activity
             android:name=".activity.ClockActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:theme="@style/metodoPomodoro" />
+            android:theme="@style/cadastro" />
         <activity
             android:name=".activity.PomodoroHomeActivity"
             android:exported="false"
@@ -68,7 +68,7 @@
         <activity
             android:name=".activity.FlashCardsActivity"
             android:exported="false"
-            android:theme="@style/flashCardsTheme" />
+            android:theme="@style/metaTheme" />
         <activity
             android:name=".activity.MetaActivity"
             android:exported="false"
@@ -76,22 +76,22 @@
         <activity
             android:name=".activity.TarefaActivity"
             android:exported="false"
-            android:theme="@style/tarefaTheme" />
+            android:theme="@style/metaTheme" />
         <activity
             android:name=".activity.PrincipalActivity"
             android:exported="false"
             android:label="@string/title_activity_principal"
-            android:theme="@style/Theme.EnsinaMente.NoActionBar" />
+            android:theme="@style/cadastro" />
         <activity
             android:name=".activity.CadastroActivity"
-            android:theme="@style/Theme.EnsinaMente.NoActionBar" />
+            android:theme="@style/cadastro" />
         <activity
             android:name=".activity.LoginActivity"
-            android:theme="@style/Theme.EnsinaMente.NoActionBar" />
+            android:theme="@style/cadastro" />
         <activity
             android:name=".activity.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Intro">
+            android:theme="@style/cadastro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

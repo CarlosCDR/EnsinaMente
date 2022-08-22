@@ -7,21 +7,25 @@
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable-v24/btn_start_ground.xml" value="0.298" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable-v24/circle_bar.xml" value="0.298" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable-v24/circle_mints.xml" value="0.298" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable-v24/ic_launcher_background2.xml" value="0.3335" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/background_item.xml" value="0.3345" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/background_menu.xml" value="0.3345" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/borda.xml" value="0.2355" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/borda_botao.xml" value="0.3335" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/borda_red.xml" value="0.298" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/borda_transparente.xml" value="0.246" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/ic_adicionar_branco_24dp.xml" value="0.2985" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/ic_black_arrow_back_24.xml" value="0.298" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/ic_confirmar_branco_24.xml" value="0.2985" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/ic_delete_vermelho_24.xml" value="0.2985" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/ic_launcher_background2.xml" value="0.3335" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/ic_menu_camera.xml" value="0.3335" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.3335" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.3335" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/ic_vermelho_24.xml" value="0.2985" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/drawable/side_nav_bar.xml" value="0.3335" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_cadastro.xml" value="0.33" />
-        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_cartao_basico.xml" value="0.24022346368715083" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_cartao_basico.xml" value="0.33" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_cartao_invertido.xml" value="0.34148550724637683" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_clock.xml" value="0.35597826086956524" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/layout/activity_editar_meta.xml" value="0.3605072463768116" />
@@ -63,6 +67,8 @@
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/menu/activity_main_drawer.xml" value="0.3625" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/menu/menu.xml" value="0.3625" />
         <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/menu/menu_main.xml" value="0.3625" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1235" />
+        <entry key="..\:/Users/Carlos/AndroidStudioProjects/EnsinaMente/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1235" />
       </map>
     </option>
   </component>

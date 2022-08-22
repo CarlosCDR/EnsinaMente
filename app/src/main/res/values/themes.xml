@@ -17,11 +17,12 @@
     <style name="tarefaTheme" parent="Theme.AppCompat.Light.NoActionBar">
           <item name="windowActionBar">false</item>
           <item name="windowNoTitle">true</item>
-          <item name="colorPrimary">@color/colorPrimaryTarefa</item>
-          <item name="colorPrimaryDark">@color/colorPrimaryDarkTarefa</item>
-          <item name="colorAccent">@color/colorAccentTarefa</item>
+          <item name="colorPrimary">@color/com_facebook_blue</item>
+          <item name="colorPrimaryDark">@color/com_facebook_button_background_color_pressed</item>
+          <item name="colorAccent">@color/com_facebook_button_send_background_color</item>
 
     </style>
+
     <style name="flashCardsTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -33,9 +34,9 @@
     <style name="metaTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="colorPrimary">@color/colorPrimaryMeta</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkMeta</item>
-        <item name="colorAccent">@color/colorAccentMeta</item>
+        <item name="colorPrimary">@color/com_facebook_button_background_color</item>
+        <item name="colorPrimaryDark">@color/com_facebook_button_background_color</item>
+        <item name="colorAccent">@color/com_facebook_button_background_color</item>
 
     </style>
     <style name="Theme.EnsinaMente.NoActionBar">
@@ -60,6 +61,14 @@
         <item name="colorPrimaryDark">@color/colorMetas</item>
         <item name="colorAccent">@color/colorMetas</item>
     </style>
+    <style name="cadastro" parent="Theme.AppCompat.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/com_facebook_button_background_color</item>
+        <item name="colorPrimaryDark">@color/com_facebook_button_send_background_color_pressed</item>
+        <item name="colorAccent">@color/colorMetas</item>
+    </style>
+
     <style name="semBarra" parent="Theme.AppCompat.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

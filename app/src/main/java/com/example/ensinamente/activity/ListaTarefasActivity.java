@@ -86,7 +86,6 @@ public class ListaTarefasActivity extends AppCompatActivity {
                                             //startActivity(intent);
                                         }
                                     });
-
                                 }
                             }
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="#009688"
+    android:background="#006796"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".activity.FlipAnimationActivity">
@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_gravity="center"
-            android:background="#4CAF50"
+            android:background="#4C79AF"
             android:gravity="center">
 
             <TextView
@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_gravity="center"
-            android:background="#3F51B5">
+            android:background="#3F99B5">
 
             <TextView
                 android:id="@+id/textFrente"

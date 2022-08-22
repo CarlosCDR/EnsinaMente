@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "84364552072",
+    "firebase_url": "https://ensina-mente-4b7b3-default-rtdb.firebaseio.com",
     "project_id": "ensina-mente-4b7b3",
     "storage_bucket": "ensina-mente-4b7b3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:84364552072:android:8ef026edb22887b7117c3d",
+        "mobilesdk_app_id": "1:84364552072:android:bd36956ebb61df8a117c3d",
         "android_client_info": {
           "package_name": "com.example.ensinamente"
         }

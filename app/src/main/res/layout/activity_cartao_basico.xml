@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#03A9F4"
+    android:background="#FF1687BA"
     tools:context=".activity.CartaoBasicoActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="415dp"
         android:layout_height="120dp"
-        android:background="@color/colorMetas"
+        android:background="@color/com_facebook_button_send_background_color_pressed"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="10dp"
@@ -26,7 +26,7 @@
             android:layout_width="100dp"
             android:layout_height="48dp"
             android:layout_gravity="left"
-            android:backgroundTint="@color/colorMetas"
+            android:backgroundTint="@color/com_facebook_button_send_background_color_pressed"
             android:contentDescription="@string/todo"
             android:orientation="vertical"
             app:srcCompat="@drawable/ic_botaovoltar_black_24"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/cart_es_basicos"
-            android:textColor="#0E0D0D"
+            android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
         <TextView
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:text="@string/nome_tarefa"
             android:textAlignment="center"
-            android:textColor="#100F0F" />
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 
@@ -59,7 +59,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="#03A9F4"
+        android:background="#1687BA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

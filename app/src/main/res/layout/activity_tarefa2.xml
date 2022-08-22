@@ -13,7 +13,7 @@
         android:id="@+id/linearLayout5"
         android:layout_width="415dp"
         android:layout_height="120dp"
-        android:background="@color/colorPrimaryTarefa"
+        android:background="@color/com_facebook_button_send_background_color_pressed"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="10dp"
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/crie_sua_tarefa"
-            android:textColor="#0E0D0D"
+            android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
     </LinearLayout>
