@@ -1,4 +1,4 @@
-Ensina Mente é um aplicativo desenvolvido para ajudar na organização dos estudos, integrando técnicas eficazes como Pomodoro e flashcards. Idealizado como um projeto de TCC, agora tem planos para lançamento futuro na PlayStore.
+Ensina Mente é um aplicativo desenvolvido para ajudar na organização dos estudos, integrando técnicas eficazes como Pomodoro e flashcards. 
 
 Funcionalidades
 Técnica Pomodoro: Gerenciamento de tempo com ciclos de estudo e pausas.
